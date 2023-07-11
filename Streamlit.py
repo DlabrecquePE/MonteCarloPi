@@ -7,10 +7,10 @@ import numpy as np
 actual = 3.141592653589793238462643383279
 batch_size, inside, outside, plot_sample = 250, 0, 0, 0
 
-plt.ion()
-plt.figure(figsize=(8, 8))
-plt.axis([-1.1, 1.1, -1.1, 1.1])
-plt.title("Pi by Monte Carlo Method")
+fig, ax = plt.subplots()
+ax.ion()
+ax.axis([-1.1, 1.1, -1.1, 1.1])
+ax.title("Pi by Monte Carlo Method")
 
 while True:
     # generate data
@@ -29,8 +29,8 @@ while True:
             inner_y.append(sample[1, point])
     pi_approx = 4 * inside / (inside + outside)
     pi_error = np.abs(pi_approx - actual)
-    plt.scatter(outer_x, outer_y, color='blue')
-    plt.scatter(inner_x, inner_y, color='red')
+    ax.scatter(outer_x, outer_y, color='blue')
+    ax.scatter(inner_x, inner_y, color='red')
 
     # manage output
     plot_sample += batch_size
@@ -40,7 +40,7 @@ while True:
     out1 = plt.text(-0.6, -1.25, output_string1)
     out2 = plt.text(-0.6, -1.30, output_string2)
     out3 = plt.text(-0.6, -1.35, output_string3)
-    st.pyplot(plt.pause(0.001))
+    st.pyplot(fig)
     out1.remove()
     out2.remove()
     out3.remove()
