@@ -8,7 +8,7 @@ actual = 3.141592653589793238462643383279
 batch_size, inside, outside, plot_sample = 250, 0, 0, 0
 
 fig, ax = plt.subplots()
-ax.ion()
+# ax.ion()
 ax.axis([-1.1, 1.1, -1.1, 1.1])
 ax.title("Pi by Monte Carlo Method")
 
