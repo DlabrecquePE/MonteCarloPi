@@ -11,7 +11,6 @@ inside = 0
 outside = 0
 plot_sample = 0
 
-plt.ion()
 plt.figure(figsize=(8,8))
 plt.axis([-1.1,1.1,-1.1,1.1])
 plt.title("Pi by Monte Carlo Method")
