@@ -11,7 +11,7 @@ plt.ion()
 fig = plt.figure(figsize=(8,8))
 ax = plt.subplot()
 ax.axis([-1.1, 1.1, -1.1, 1.1])
-plt.set_title('Pi by Monte Carlo Method')
+plt.title('Pi by Monte Carlo Method')
 
 while True:
     # generate data
