@@ -10,7 +10,7 @@ batch_size, inside, outside, plot_sample = 250, 0, 0, 0
 fig, ax = plt.subplots()
 plt.ion()
 plt.axis([-1.1, 1.1, -1.1, 1.1])
-plt.title("Pi by Monte Carlo Method")
+ax.title("Pi by Monte Carlo Method")
 
 while True:
     # generate data
