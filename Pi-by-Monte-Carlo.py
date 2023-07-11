@@ -43,7 +43,7 @@ while True:
     out1=plt.text(-0.6,-1.25,output_string1)
     out2=plt.text(-0.6,-1.30,output_string2)
     out3=plt.text(-0.6,-1.35,output_string3)
-    plt.show()
+    plt.pause(1)
     out1.remove()
     out2.remove()
     out3.remove()
