@@ -4,11 +4,7 @@ import numpy as np
 
 # initialize
 actual = 3.141592653589793238462643383279
-batch_size = 100
-
-inside = 0
-outside = 0
-plot_sample = 0
+batch_size, inside, outside, plot_sample = 250, 0, 0, 0
 
 plt.ion()
 plt.figure(figsize=(8, 8))
@@ -38,7 +34,7 @@ while True:
     # manage output
     plot_sample += batch_size
     output_string1 = 'Pi is approximately ' + str(pi_approx)
-    output_string2 = 'Off from the actual value by ' + str(pi_error)
+    output_string2 = 'Error: ' + str(pi_error * 100) + '%'
     output_string3 = 'Sample # ' + str(plot_sample)
     out1 = plt.text(-0.6, -1.25, output_string1)
     out2 = plt.text(-0.6, -1.30, output_string2)
@@ -47,4 +43,3 @@ while True:
     out1.remove()
     out2.remove()
     out3.remove()
-    
