@@ -20,11 +20,11 @@ while True:
     #generate data
     sample=np.array([np.random.uniform(-1,1, size = batchsize),np.random.uniform(-1,1, size = batchsize)])
     magnitudes=[]
-    for elem in range(len(sample[0])):
+    for elem in range(batchsize):
         magnitudes.append(np.sqrt((sample[0,elem]**2)+(sample[1,elem]**2)))
 
     #calculate and plot
-    for x in range(len(magnitudes)):
+    for x in range(batchsize):
         if magnitudes[x] > 1:
             outside+=1
             plt.scatter(sample[0,x],sample[1,x],color='blue')
@@ -42,7 +42,7 @@ while True:
     out1=plt.text(-0.6,-1.25,output_string1)
     out2=plt.text(-0.6,-1.30,output_string2)
     out3=plt.text(-0.6,-1.35,output_string3)
-    plt.pause(0.000001)
+    plt.show()
     out1.remove()
     out2.remove()
     out3.remove()
