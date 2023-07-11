@@ -7,7 +7,7 @@ import numpy as np
 actual = 3.141592653589793238462643383279
 batch_size, inside, outside, plot_sample = 250, 0, 0, 0
 
-
+plt.ion()
 fig = plt.figure(figsize=(8,8))
 ax = plt.subplot()
 ax.axis([-1.1, 1.1, -1.1, 1.1])
