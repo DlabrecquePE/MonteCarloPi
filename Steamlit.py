@@ -8,7 +8,7 @@ actual = 3.141592653589793238462643383279
 batch_size, inside, outside, plot_sample = 250, 0, 0, 0
 
 plt.ion()
-fig = plt.figure(figsize=(8, 8))
+plt.figure(figsize=(8, 8))
 plt.axis([-1.1, 1.1, -1.1, 1.1])
 plt.title("Pi by Monte Carlo Method")
 
@@ -40,7 +40,7 @@ while True:
     out1 = plt.text(-0.6, -1.25, output_string1)
     out2 = plt.text(-0.6, -1.30, output_string2)
     out3 = plt.text(-0.6, -1.35, output_string3)
-    st.pyplot(fig)
+    st.pyplot(plt.pause(0.001))
     out1.remove()
     out2.remove()
     out3.remove()
